@@ -1,2 +1,2 @@
 # recipebook-PAGKALIWANGAN-LuisAndrei
-CSCI40 - Lab 1 - Templates
+CSCI40 - Lab 2 - Models
