@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+
+	<a href = "/recipes/list">Back to Recipe List</a>
+
+	<h2>Recipe Detail</h2>
+	<h3> {{ recipe.name }}</h3>
+
+	<ul>
+		{% for ingredient in recipe.ingredients.all %}
+			<li>
+				{{ ingredient.quantity }} - {{ ingredient.ingredient.name }}
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
