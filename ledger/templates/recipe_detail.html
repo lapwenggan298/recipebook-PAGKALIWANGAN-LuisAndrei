@@ -2,10 +2,11 @@
 
 	{% block content %}
 
-	<a href = "/recipes/list">Back to Recipe List</a>
+	<a href = "{% url 'recipe_list' %}">Back to Recipe List</a>
 
 	<h2>Recipe Detail</h2>
 	<h3> {{ recipe.name }}</h3>
+	<p>Author: {{ recipe.author.name }} </p>
 
 	<ul>
 		{% for ingredient in recipe.ingredients.all %}
