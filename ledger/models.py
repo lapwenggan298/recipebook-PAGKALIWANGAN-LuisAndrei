@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+
 # Create your models here.
 
 class Ingredient(models.Model):
@@ -9,7 +10,7 @@ class Ingredient(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('ledger:recipe_list', args=[str(self.id)])
+        return reverse('ledger:recipe_list')
 
 
 class Recipe(models.Model):
@@ -19,7 +20,7 @@ class Recipe(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('ledger:recipe_detail', args=[str(self.id)])
+        return reverse('ledger:recipe_detail', args=[str(self.pk)])
 
 
 class RecipeIngredient(models.Model):
