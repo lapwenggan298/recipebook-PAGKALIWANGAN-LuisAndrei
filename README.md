@@ -1,2 +1,2 @@
 # recipebook-PAGKALIWANGAN-LuisAndrei
-CSCI40 - Lab 2 - Models
+CSCI40 - Lab 3 - User Management
