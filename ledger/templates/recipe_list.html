@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 
 	{% block content %}
 	<h2>Recipe List</h2>
+
 	<ul>
 		{% for recipe in recipe_list %}
 			<li>
@@ -12,4 +14,8 @@
 		{% endfor %}
 	</ul>
 
+	<br>
+
+	<a href = "{% url 'ledger:recipe_add' %}">Add Recipe</a>
+	
 {% endblock %}

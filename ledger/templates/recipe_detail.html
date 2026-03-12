@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 	{% block content %}
 
@@ -7,6 +8,15 @@
 	<h2>Recipe Detail</h2>
 	<h3> {{ recipe.name }}</h3>
 	<p>Author: {{ recipe.author.name }} </p>
+
+	{% if recipe.images.exists %}
+		{% for imgs in recipe.images.all %}
+			<br>
+			<img src = "{{ imgs.image.url }}" alt = "{{ imgs.image_description }}">
+		{% endfor %}
+	{% endif %}
+
+	<a href = "{% url 'ledger:image_add' recipe.pk %}">Add Image</a>
 
 	<ul>
 		{% for ingredient in recipe.ingredients.all %}
