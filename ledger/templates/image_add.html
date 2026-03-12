@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+	{% block content %}
+
+	<form method = "POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<button type = "submit">Add Image</button>
+	</form>
+
+	<a href = "{% url 'ledger:recipe_detail' pk=recipe_pk %}">Cancel/Go Back to Recipe Detail</a>
+	{% endblock %}
